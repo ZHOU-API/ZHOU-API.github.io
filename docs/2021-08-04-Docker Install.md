@@ -1,9 +1,7 @@
 ---
 title: 'Docker Install'
-layout: post
-tags:
-  - docker
-category: 运维
+nav_order: 20210804
+parent: 服务器
 ---
 docker安装过程。
 
