@@ -1,0 +1,97 @@
+---
+title: 'mongodb'
+layout: default
+parent: Database
+---
+文档存储务 mongodb。
+
+<!--more-->
+
+# 一、docker安装
+
+```shell
+docker pull mongo:latest
+
+docker run -itd --name mongo -p 27017:27017 mongo
+
+#需要密码访问
+docker run -itd --name mongo -p 27017:27017 mongo --auth
+
+docker run -itd -p 9000:27017 \
+--name mongodb \
+-v /mydata/mongo/db:/data/db \
+-v /mydata/mongo/mongo.conf:/data/configdb/mongo.conf \
+-e TZ=Asia/Shanghai \
+-d mongo -f /data/configdb/mongo.conf
+
+
+```
+
+
+# 二、配置
+```
+#用admin进入容器
+docker exec -it mongo mongo admin
+
+#初始化admin
+db.createUser({ user:'admin',pwd:'qazwsx123!',roles:[ { role:'userAdminAnyDatabase', db: 'admin'},"readWriteAnyDatabase"]});
+
+#使用admin权限
+db.auth(‘admin’,‘qazwsx123’)
+
+#查看所有数据库(库必须有记录才可以查看)
+show.dbs
+
+#查看当前用户数据库
+db
+
+```
+
+# 三、同步
+
+## 备份
+```
+mongodump -u -p --port 28020 --authenticationDatabase admin -o /tmp/backup
+
+mongodump -u -p --port 28020 --authenticationDatabase admin -d test -o /tmp/backup
+
+mongodump -u -p --port 28020 --authenticationDatabase admin -d test -c customer -o /tmp/backup
+
+```
+
+## 恢复
+```
+mongorestore -u -p --port 28018 --authenticationDatabase admin -d test /tmp/backup/test
+
+mongorestore -u -p --port 28018 --authenticationDatabase admin -d test -c customer /tmp/backup/test/customer.bson
+
+mongorestore --host 119.29.96.86:27017 -u demo -p demo$678  --authenticationDatabase=demo --db=demo --dir  D:\Desktop\fsdownload\demo
+
+```
+
+## 参数
+-h,–host ：代表远程连接的数据库地址，默认连接本地Mongo数据库；
+
+–port：代表远程连接的数据库的端口，默认连接的远程端口27017；
+
+-u,–username：代表连接远程数据库的账号，如果设置数据库的认证，需要指定用户账号；
+
+-p,–password：代表连接数据库的账号对应的密码；
+
+-d,–db：代表连接的数据库；
+
+-c,–collection：代表连接数据库中的集合；
+
+-o, --out：代表导出的文件输出目录；
+
+–dir = <目录名称>输入目录
+
+–drop导入前删除数据库中集合；
+
+–gzip，解压Gzip压缩存档还原；
+
+–oplog，重放oplog以基于时间点还原；
+
+–oplogFile = <文件名>指定重播oplog的oplog文件
+
+–authenticationDatabase，指定用户鉴定库

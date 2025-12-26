@@ -1,0 +1,63 @@
+---
+title: 'ffmpeg'
+layout: default
+parent: Other
+---
+ffmpeg命令行使用
+
+<!--more-->
+
+# 一、安装
+
+## window环境
+```
+###
+```
+
+## 1：将图片序列合并成视频
+```
+ffmpeg -r 100 -i frame-%d.png -c:v libx264 -pix_fmt yuv420p -preset:v slow -profile:v baseline -crf 18 -vf scale=out_color_matrix=bt709 -color_primaries bt709 -color_trc bt709 -colorspace bt709 result1.mp4
+
+###说明
+-r：帧率（100FPS）
+-i：输入（%d为数字通配符）
+
+
+
+```
+
+## 2：音频去除开头静默和结尾增加渐隐
+```
+#开头静默
+ffmpeg -i test.mp3 -af silenceremove=start_periods=1:start_duration=0:start_threshold=-60dB -c:a libmp3lame -q:a 2 -ss 0 -t 10 new1.mp3
+
+#结尾渐隐
+ffmpeg -i new1.mp3 -filter_complex afade=t=out:st=5:d=5 -c:a libmp3lame -q:a 2 new2.mp3
+
+###说明
+-i：输入
+-af：auto_filter基础过滤器
+-filter_complex：混合过滤器
+-silenceremove=start_periods=1:start_duration=0:start_threshold=-60dB：静默删除
+-afade=t=out:st=5:d=5：结尾渐隐st开始时刻d维持
+-c:a libmp3lame：编码器
+-q:a 2：输出音频质量
+
+```
+
+## 3：将MP4无损压缩
+```
+ffmpeg -i media1.mp4 -c:v libx265 -x265-params crf=18:preset=placebo media1_b.mp4
+```
+
+## 4：将mp4无损转成gif
+```
+ffmpeg -i 1.mp4 -s 400x400 -vf "[in]scale=400x400,split[split1][split2];[split1]palettegen=stats_mode=single[pal];[split2][pal]paletteuse=new=1" 1.gif
+
+ffmpeg -i 1.mp4 -ss 7.400 -t 3 -vf "fps=15,scale=180:320:flags=spline,split[a][b];[a]palettegen[p];[b][p]paletteuse,crop=w=180:h=180:x=0:y=40" wzm-6.gif
+```
+
+## 4：生成调色板
+```
+ffmpeg -i 1.mp4 -vf "fps=30,scale=800:800:flags=spline,palettegen" 1.png
+```

@@ -1,0 +1,46 @@
+---
+title: 'Kibana'
+layout: default
+parent: DevOps
+---
+Kibana：开源的web数据分析平台，结合elasticsearch，logstash构建统一日志框架ELK。
+
+<!--more-->
+
+## 一、Docker 部署
+### elk容器版本必须一致
+```
+#拉去Kibana
+docker pull kibana:7.7.0
+
+#运行kibana 注意IP一定不要写错
+docker run --name kibana -e ELASTICSEARCH_HOSTS=http://172.17.180.145:9200 -p 5601:5601 -d kibana:7.7.0
+
+#进入容器
+docker exec -it 容器ID /bin/sh
+
+#使用vi 修改文件内容
+vi /usr/share/kibana/config/kibana.yml 
+
+```
+### kibana.yml
+```
+server.name: kibana
+server.host: "0"
+#elasticsearch.hosts: [ "http://elasticsearch:9200" ]
+elasticsearch.hosts: [ "http://自己的elasticsearch的IP:9200" ]
+xpack.monitoring.ui.container.elasticsearch.enabled: true
+#设置kibana中文显示
+i18n.locale: zh-CN
+
+```
+### 访问http://自己的IP地址:5601
+
+## 二、构建索引实现可视化
+1、进入setting配置页
+
+2、输入正则匹配es_index
+
+3、选择日期模式
+
+4、完成新建并在控制台首页查看

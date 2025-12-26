@@ -1,0 +1,19 @@
+---
+title: 'Chrome 多开技巧'
+layout: default
+parent: Other
+---
+Chrome 多开技巧。
+
+<!--more-->
+
+# windows
+
+## 创建桌面快捷方式修改属性
+在目标后添加：空格+命令
+重定向数据存储路径
+```
+ --user-data-dir="D:\Program Files\Google\Chrome1"
+```
+
+

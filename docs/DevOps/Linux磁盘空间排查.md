@@ -1,0 +1,25 @@
+---
+title: 'linux磁盘空间排查'
+layout: default
+parent: DevOps
+---
+linux磁盘空间排查。
+
+<!--more-->
+
+# df命令
+快速查看/下所有空间以及占用
+```
+df -h
+
+
+```
+
+
+# du命令
+查看每个目录下的空间
+```
+du -sh /*
+du -sh /home/*
+du -sh /home/app/*
+```

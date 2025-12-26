@@ -1,0 +1,73 @@
+---
+title: 'hanlp'
+layout: default
+parent: Other
+---
+hanlp分词工具.
+
+<!--more-->
+
+# 一、docker安装
+
+```shell
+docker pull samurais/hanlp-api:latest
+
+docker run -itd --name hanlp -p 3002:3000 samurais/hanlp-api:latest
+
+```
+
+## http -- .eg
+
+```
+POST /tokenizer HTTP/1.1
+Host: localhost:3002
+Content-Type: application/json
+
+{
+    "type": "nlp",
+    "content": "刘德华和张学友创作了很多流行歌曲"
+}
+
+RESPONSE
+{
+  "status": "success",
+  "data": [
+    {
+      "word": "刘德华",
+      "nature": "nr",
+      "offset": 0
+    },
+    {
+      "word": "和",
+      "nature": "cc",
+      "offset": 0
+    },
+    {
+      "word": "张学友",
+      "nature": "nr",
+      "offset": 0
+    },
+    {
+      "word": "创作",
+      "nature": "v",
+      "offset": 0
+    },
+    {
+      "word": "了",
+      "nature": "ule",
+      "offset": 0
+    },
+    {
+      "word": "很多",
+      "nature": "m",
+      "offset": 0
+    },
+    {
+      "word": "流行歌曲",
+      "nature": "n",
+      "offset": 0
+    }
+  ]
+}
+```
+

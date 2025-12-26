@@ -1,0 +1,202 @@
+---
+title: 'Linux tar'
+layout: default
+parent: DevOps
+---
+Linux tar 常用命令。
+
+<!--more-->
+
+# 打包&解压
+```shell
+01-.tar格式
+
+解包：tar xvf FileName.tar
+
+打包：tar cvf FileName.tar DirName(注：tar是打包，不是压缩！)
+
+02-.gz格式
+
+解压1：gunzip FileName.gz
+
+解压2：gzip -d FileName.gz
+
+压 缩：gzip FileName
+
+03-.tar.gz格式
+
+解压：tar zxvf FileName.tar.gz
+
+压缩：tar zcvf FileName.tar.gz DirName
+
+04-.bz2格式
+
+解压1：bzip2 -d FileName.bz2
+
+解压2：bunzip2 FileName.bz2
+
+压 缩： [＊＊＊＊＊＊＊]$ bzip2 -z FileName
+
+05-.tar.bz2格式
+
+解压：tar jxvf FileName.tar.bz2
+
+压缩：tar jcvf FileName.tar.bz2 DirName
+
+06-.bz格式
+
+解压1：bzip2 -d FileName.bz
+
+解压2：bunzip2 FileName.bz
+
+07-.tar.bz格式
+
+解压：tar jxvf FileName.tar.bz
+
+08-.Z格式
+
+解压：uncompress FileName.Z
+
+压缩：compress FileName
+
+09-.tar.Z格式
+
+解压：tar Zxvf FileName.tar.Z
+
+压缩：tar Zcvf FileName.tar.Z DirName
+
+10-.tgz格式
+
+解压：tar zxvf FileName.tgz
+
+11-.tar.tgz格式
+
+解压：tar zxvf FileName.tar.tgz
+
+压缩：tar zcvf FileName.tar.tgz FileName
+
+12-.zip格式
+
+解压：unzip FileName.zip
+
+压缩：zip FileName.zip DirName
+
+13-.lha格式
+
+解压：lha -e FileName.lha
+
+压缩：lha -a FileName.lha FileName
+
+14-.rar格式
+
+解压：rar x FileName.rar或unrar -e FileName.rar
+
+压缩：rar a FileName.rar FileDir
+
+有关rar请到：http://www.rarsoft.com/download.htm 下载！
+
+解压后请将rar_static拷贝到/usr/bin目录(其他由$PATH环境变量
+
+指定的目录也行)： cp rar_static /usr/bin/rar
+
+15.在linux下分卷压缩
+
+tar cvzpf – vmvps | split -d -b 50m
+
+上面的命令是将vmvps这个文件夹分卷压缩，每卷50m，分卷会被命名为x00,x01,x02
+
+在linux下解压
+
+首先需要合并：
+
+合并的命令是： cat x*>vmvps.tar.gz
+
+然后解压：tar xzvf vmvps.tar.gz
+
+16.切换工作路径
+打包/xx/xx/xx/下所有文件，不会tar不会附带/xx/xx/xx/文件夹
+tar -zcf xx.tar.gz -C /xx/xx/xx/ .
+```
+
+
+# 常用参数说明
+
+-A:新增文件到以存在的备份文件
+
+-B:设置区块大小
+
+-c:建立新的备份文件
+
+-C :切换工作目录，
+
+先进入指定目录再执行压缩/解压缩操作，
+
+可用于仅压缩特定目录里的内容或解压缩到特定目录
+
+-d:记录文件的差别
+
+-x:从归档文件中提取文件
+
+-t:列出备份文件的内容
+
+-z:通过gzip指令压缩/解压缩文件，文件名最好为*.tar.gz
+
+-Z:通过compress指令处理备份文件
+
+-f:指定备份文件
+
+-v:显示指令执行过程
+
+-r:添加文件到已经压缩的文件
+
+-u:添加改变了和现有的文件到已经存在的压缩文件
+
+-j:通过bzip2指令压缩/解压缩文件，文件名最好为*.tar.bz2
+
+-v:显示操作过程
+
+-l:文件系统边界设置
+
+-k:保留原有文件不覆盖
+
+-m:保留文件不被覆盖
+
+-w:确认压缩文件的正确性
+
+-p:保留原来的文件权限与属性
+
+-P:使用文件名的绝对路径，不移除文件名称前的“/”号
+
+-N :只将较指定日期更新的文件保存到备份文件里
+
+-- -exclude=:排除符合范本样式的文件
+
+-- -remove-files:归档/压缩之后删除源文件
+
+# 注意事项
+
+tar创建档案文件时，也可以在档案中改变文件或向档案中加入新文件
+
+例：
+
+tar命令的示例分享
+
+---将所有.php的文件打成一个名为maomao.tar的包
+
+```
+tar -cf maomao.tar *.php
+```
+
+
+---打包文件之后删除源文件
+
+```
+tar -cvf maomao365.tar maomao365 --remove-files
+```
+
+
+---打包文件以后，以 gzip 压缩
+
+```
+tar -zcvf log.tar.gz maomao365.log
+```
