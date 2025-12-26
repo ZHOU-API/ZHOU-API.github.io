@@ -1,6 +1,0 @@
----
-title: Database
-nav_order: 1
-has_children: true
-collapsed: false
----

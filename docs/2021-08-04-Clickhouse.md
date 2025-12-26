@@ -1,6 +1,5 @@
 ---
-title: 'OLAP数据库 Clickhouse'
-parent: 'Database'
+title: '2021-08-04 Clickhouse'
 ---
 OLAP数据库 Clickhouse 安装和使用。
 

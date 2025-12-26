@@ -1,6 +1,5 @@
 ---
-title: 'Linux Network 配置'
-parent: 'DevOps'
+title: '2021-08-04-Linux Network'
 ---
 Linux Network 配置。
 

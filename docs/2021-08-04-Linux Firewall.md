@@ -1,6 +1,5 @@
 ---
-title: 'Linux Firewall 常用命令'
-parent: 'DevOps'
+title: '2021-08-04-Linux Firewall'
 ---
 Linux Firewall 常用命令。
 

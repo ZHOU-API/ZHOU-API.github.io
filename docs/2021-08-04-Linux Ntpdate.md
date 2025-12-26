@@ -1,6 +1,5 @@
 ---
-title: 'Linux ntpdate 实现时间同步'
-parent: 'DevOps'
+title: '2021-08-04-Linux Ntpdate'
 ---
 Linux ntpdate 实现时间同步。
 
