@@ -1,6 +1,6 @@
 ---
 title: 'Sublime Text 3 Install'
-layout: post
+layout: default
 tags:
   - software
 category: 软件

@@ -1,6 +1,6 @@
 ---
 title: 'springcloud alibaba rocketMQ'
-layout: post
+layout: default
 tags:
   - java
   - springCloud

@@ -1,6 +1,6 @@
 ---
 title: 'docker'
-layout: post
+layout: default
 tags:
   - docker
 category: 运维

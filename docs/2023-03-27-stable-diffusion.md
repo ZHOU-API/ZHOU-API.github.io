@@ -1,6 +1,6 @@
 ---
 title: 'stable-diffusion'
-layout: post
+layout: default
 tags:
   - 文生图
 category: AI

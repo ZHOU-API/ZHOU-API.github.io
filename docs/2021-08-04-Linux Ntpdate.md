@@ -1,5 +1,6 @@
 ---
 title: '2021-08-04-Linux Ntpdate'
+layout: default
 ---
 Linux ntpdate 实现时间同步。
 

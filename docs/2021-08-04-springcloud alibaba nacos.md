@@ -1,6 +1,6 @@
 ---
 title: 'springcloud alibaba nacos'
-layout: post
+layout: default
 tags:
   - java
   - springCloud

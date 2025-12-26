@@ -1,6 +1,6 @@
 ---
 title: 'web文件预览'
-layout: post
+layout: default
 tags:
   - kkfileview
 category: 框架

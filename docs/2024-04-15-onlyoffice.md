@@ -1,6 +1,6 @@
 ---
 title: 'onlyoffice'
-layout: post
+layout: default
 tags:
   - office
 category: 服务

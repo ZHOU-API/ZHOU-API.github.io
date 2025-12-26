@@ -1,5 +1,6 @@
 ---
 title: '2021-08-04-Linux Firewall'
+layout: default
 ---
 Linux Firewall 常用命令。
 

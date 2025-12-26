@@ -1,6 +1,6 @@
 ---
 title: 'springcloud gateway'
-layout: post
+layout: default
 tags:
   - java
   - springCloud

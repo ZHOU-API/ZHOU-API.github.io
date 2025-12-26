@@ -1,6 +1,6 @@
 ---
 title: 'Springboot Docker制作'
-layout: post
+layout: default
 tags:
   - java
   - docker

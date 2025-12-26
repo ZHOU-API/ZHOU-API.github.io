@@ -1,6 +1,6 @@
 ---
 title: 'Aspose.PSD for Java'
-layout: post
+layout: default
 tags:
   - psd
 category: 框架

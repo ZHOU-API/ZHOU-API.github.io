@@ -1,6 +1,6 @@
 ---
 title: 'springcloud alibaba sentinel'
-layout: post
+layout: default
 tags:
   - java
   - springCloud

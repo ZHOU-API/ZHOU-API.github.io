@@ -1,6 +1,6 @@
 ---
 title: 'Emscripten安装'
-layout: post
+layout: default
 tags:
   - wasm
 category: 框架

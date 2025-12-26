@@ -1,6 +1,6 @@
 ---
 title: 'Sql server'
-layout: post
+layout: default
 tags:
   - sqlserver
 category: 数据库

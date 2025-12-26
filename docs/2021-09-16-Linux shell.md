@@ -1,6 +1,6 @@
 ---
 title: 'Linux shell'
-layout: post
+layout: default
 tags:
   - linux
 category: 运维

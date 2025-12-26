@@ -1,6 +1,6 @@
 ---
 title: 'docker+spug+springboot快速部署'
-layout: post
+layout: default
 tags:
   - java
   - docker

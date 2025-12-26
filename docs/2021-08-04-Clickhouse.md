@@ -1,5 +1,6 @@
 ---
 title: '2021-08-04 Clickhouse'
+layout: default
 ---
 OLAP数据库 Clickhouse 安装和使用。
 

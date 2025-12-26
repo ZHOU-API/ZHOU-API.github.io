@@ -1,6 +1,6 @@
 ---
 title: 'app spider'
-layout: post
+layout: default
 tags:
   - spider
 category: spider

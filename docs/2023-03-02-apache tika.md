@@ -1,6 +1,6 @@
 ---
 title: 'apache tika'
-layout: post
+layout: default
 tags:
   - apache
 category: 框架

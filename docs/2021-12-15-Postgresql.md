@@ -1,6 +1,6 @@
 ---
 title: 'PostgreSql安装'
-layout: post
+layout: default
 tags:
   - PostgreSql
 category: 数据库

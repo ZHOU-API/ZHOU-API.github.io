@@ -1,6 +1,6 @@
 ---
 title: 'springcloud alibaba seata'
-layout: post
+layout: default
 tags:
   - java
   - springCloud

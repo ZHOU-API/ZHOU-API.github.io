@@ -1,6 +1,6 @@
 ---
 title: 'Disruptor'
-layout: post
+layout: default
 tags:
   - disruptor
 category: 框架

@@ -1,6 +1,6 @@
 ---
 title: '搜索引擎'
-layout: post
+layout: default
 tags:
   - elasticsearch
   - java

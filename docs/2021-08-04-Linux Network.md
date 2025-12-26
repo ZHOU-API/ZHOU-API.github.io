@@ -1,5 +1,6 @@
 ---
 title: '2021-08-04-Linux Network'
+layout: default
 ---
 Linux Network 配置。
 
