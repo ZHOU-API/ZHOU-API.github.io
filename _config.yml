@@ -4,7 +4,7 @@ theme: just-the-docs
 
 url: https://zhou-api.github.io
 just_the_docs:
-  collapsible: true   # 允许折叠
-  collapsed: false    # false = 默认展开（全局）
+  collapsible: true
+  collapsed: false
 aux_links:
   Template Repository: https://github.com/just-the-docs/just-the-docs-template
