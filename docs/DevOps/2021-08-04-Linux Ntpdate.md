@@ -1,9 +1,6 @@
 ---
 title: 'Linux ntpdate 实现时间同步'
-layout: post
-tags:
-  - linux
-category: 运维 
+parent: 'DevOps'
 ---
 Linux ntpdate 实现时间同步。
 

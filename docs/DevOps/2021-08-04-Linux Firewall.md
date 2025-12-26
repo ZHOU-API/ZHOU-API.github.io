@@ -1,9 +1,6 @@
 ---
 title: 'Linux Firewall 常用命令'
-layout: post
-tags:
-  - linux
-category: 运维
+parent: 'DevOps'
 ---
 Linux Firewall 常用命令。
 

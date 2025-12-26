@@ -1,9 +1,6 @@
 ---
 title: 'Linux Network 配置'
-layout: post
-tags:
-  - linux
-category: 运维
+parent: 'DevOps'
 ---
 Linux Network 配置。
 

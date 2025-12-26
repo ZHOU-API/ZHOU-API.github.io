@@ -1,9 +1,6 @@
 ---
 title: 'OLAP数据库 Clickhouse'
-layout: post
-tags:
-  - clickhouse
-category: 数据库
+parent: 'Database'
 ---
 OLAP数据库 Clickhouse 安装和使用。
 

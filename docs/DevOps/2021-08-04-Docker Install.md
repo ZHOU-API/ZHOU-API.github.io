@@ -1,9 +1,6 @@
 ---
 title: 'Docker Install'
-layout: post
-tags:
-  - docker
-category: 运维
+parent: 'DevOps'
 ---
 docker安装过程。
 
