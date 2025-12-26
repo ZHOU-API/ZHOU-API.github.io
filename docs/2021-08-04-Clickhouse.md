@@ -1,6 +1,8 @@
 ---
 title: '2021-08-04 Clickhouse'
 layout: default
+parent: Database
+nav_order: 1
 ---
 OLAP数据库 Clickhouse 安装和使用。
 

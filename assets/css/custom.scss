@@ -1,0 +1,27 @@
+---
+---
+
+/* 1. 强制侧边栏所有子菜单始终展开 */
+.nav-list .nav-list {
+    display: block !important;
+}
+
+/* 2. 隐藏折叠/展开的小箭头 */
+.nav-list-expander {
+    display: none !important;
+}
+
+/* 3. 禁用父级菜单点击，使其变为纯标签 */
+.nav-list-item > a.nav-list-link {
+    pointer-events: none; /* 禁止点击 */
+    cursor: default;      /* 鼠标指针恢复默认 */
+    color: #5c626e;       /* 调整颜色使其看起来像标题 */
+    font-weight: bold;    /* 加粗分类名称 */
+}
+
+/* 4. 确保子页面链接依然可以点击 */
+.nav-list-item .nav-list .nav-list-item > a.nav-list-link {
+    pointer-events: auto;
+    cursor: pointer;
+    font-weight: normal;
+}
