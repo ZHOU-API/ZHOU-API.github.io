@@ -1,7 +1,9 @@
 ---
 title: 'OLAP数据库 Clickhouse'
-nav_order: 20210804
-parent: 数据库
+layout: post
+tags:
+  - clickhouse
+category: 数据库
 ---
 OLAP数据库 Clickhouse 安装和使用。
 
