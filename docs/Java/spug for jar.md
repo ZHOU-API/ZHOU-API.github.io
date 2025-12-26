@@ -1,5 +1,5 @@
 ---
-title: 'docker+spug+springboot'
+title: 'spug for jar'
 layout: default
 parent: Java
 ---
