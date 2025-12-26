@@ -1,6 +1,7 @@
 ---
-title: '2021-08-05-Docker'
+title: 'Docker'
 layout: default
+parent: DevOps
 ---
 docker安装过程。
 
