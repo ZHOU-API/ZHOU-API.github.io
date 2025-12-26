@@ -1,9 +1,7 @@
 ---
 title: 'onlyoffice'
 layout: default
-tags:
-  - office
-category: 服务
+parent: Other
 ---
 onlyoffice:用于在一处管理文档、项目、客户关系和电子邮件的协作系统
 

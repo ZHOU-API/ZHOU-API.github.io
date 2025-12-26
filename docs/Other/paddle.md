@@ -1,9 +1,7 @@
 ---
-title: 'AI框架'
+title: 'paddle'
 layout: default
-tags:
-  - paddle
-category: AI
+parent: Other
 ---
 百度AI框架飞浆 - paddle.
 

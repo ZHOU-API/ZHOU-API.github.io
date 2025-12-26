@@ -1,9 +1,7 @@
 ---
 title: 'stable-diffusion'
 layout: default
-tags:
-  - 文生图
-category: AI
+parent: Other
 ---
 stable-diffusion试用
 

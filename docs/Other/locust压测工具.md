@@ -1,9 +1,7 @@
 ---
 title: 'Locust'
 layout: default
-tags:
-  - locust
-category: 框架
+parent: Other
 ---
 locust测试工具.
 
