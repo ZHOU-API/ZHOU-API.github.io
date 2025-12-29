@@ -1,7 +1,7 @@
-title: Just the Docs Template
-description: A starter template for a Jeykll site using the Just the Docs theme!
+title: zhou Doc
+description: zhou Doc
 theme: just-the-docs
-
+gh_edit_link: false
 url: https://zhou-api.github.io
 
 aux_links:
