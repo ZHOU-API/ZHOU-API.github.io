@@ -3,6 +3,3 @@ description: zhou Doc
 theme: just-the-docs
 gh_edit_link: false
 url: https://zhou-api.github.io
-
-aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
