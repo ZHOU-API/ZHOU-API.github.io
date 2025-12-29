@@ -20,6 +20,6 @@
 .nav-list-item .nav-list .nav-list-item > a.nav-list-link {
     pointer-events: auto;
     cursor: pointer;
-    color: #9880f9;
+    color: #9880f9 !important;
     font-weight: normal;
 }
